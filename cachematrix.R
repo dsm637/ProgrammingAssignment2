@@ -3,6 +3,8 @@
 
 ## Write a short comment describing this function
 
+## The function create an object containing a list of functions 
+## providing an access to the original and cached inverted matrices
 makeCacheMatrix <- function(x = matrix()) {
   s <- NULL
   set <- function(y) {
@@ -21,8 +23,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## The function accepts an object constructed by makeCacheMatrix function. 
+## When called it returns cached inverted matrix value. 
+## If the cached value is missing, the function calculates and caches it.
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   s <- x$getsolve()
